@@ -1,17 +1,21 @@
 # Static Content challenge - mid-level
 
+## Requirements
+* A recent LTS version of nodejs, preferably 16.15.1.
+
 ## Usage
 
 ### Local
 
 * Clone this repository.
-* Run `node main.js`.
+* Run `npm install`.
+* Run `npm run dev`.
 * Open `localhost:3333 in your browser`.
 * Use `npm run test` to run the tests.
 
 ### [Hosted Version](https://stark-lake-32866.herokuapp.com/)
 
-This MVP can be easily hosted on Heroku by following the steps in the [offical documentation.](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true)
+This app can be easily hosted on Heroku by following the steps in the [offical documentation.](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true)
 
 ## Tech Choices
 
