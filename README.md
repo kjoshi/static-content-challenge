@@ -1,6 +1,30 @@
 # Static Content challenge - mid-level
 
-**NB: Please do not fork this repository, to avoid your solution being visible from this repository's GitHub page. Please clone this repository and submit your solution as a separate repository.**
+## Usage
+
+### Local
+
+* Clone this repository.
+* Run `node main.js`.
+* Open `localhost:3333 in your browser`.
+* Use `npm run test` to run the tests.
+
+### [Hosted Version](https://stark-lake-32866.herokuapp.com/)
+
+This MVP can be easily hosted on Heroku by following the steps in the [offical documentation.](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true)
+
+## Tech Choices
+
+This app uses a combination of [express](https://expressjs.com/), [handlebars](https://handlebarsjs.com/) and [handlebars-helpers](https://github.com/helpers/handlebars-helpers) to serve the static content (I'd not used handlebars before and have been wanting to give it a try)
+
+A single catch-all route is used to serve the content from the markdown files, and one other route is used to serve the index page.
+If a markdown file corresponding to the URL is not found, the 404 page is shown instead.
+
+The `markdown` helper from the handlebars-helpers repository is used to load a markdown file, convert the content to HTML and add it into the template.
+
+[TailwindCSS](https://tailwindcss.com/) has been used for all styling, since the [typography plugin](https://tailwindcss.com/docs/typography-plugin) can be used to easily add CSS styles to the markdown content.
+
+## Original challenge text
 
 Business Scenario: Acme Co's marketing department want a simple content management system and you've been tasked with building the MVP.
 
@@ -14,7 +38,7 @@ This repository contains a `template.html` template file and a sample `content` 
 
 Your application may make use of open-source code libraries. It is entirely up to you how the application performs the challenge.
 
-## Testing
+### Testing
 
 The application should be shipped with three tests:
 
@@ -23,7 +47,7 @@ The application should be shipped with three tests:
 * one that verifies that requests to URLs that do not match content folders return a 404 HTTP status code
 * NB: the tests should not depend on the existing sub-folders in the `content` folder, so the tests do not break as the content changes
 
-## Bonus credit
+### Bonus credit
 
 In this MVP sprint, there are two nice-to-have tickets:
 
